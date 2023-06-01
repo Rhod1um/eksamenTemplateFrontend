@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar-header.css">
+    <title>Parent1</title>
+</head>
+<body>
+<section>
+    <h2 class="headline">Parent1 oversigt</h2>
+    <div id="btn-create">
+        <button type="button">Opret parent1</button>
+    </div>
+
+    <table id="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Navn</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody> <!--body fordi js looper i tbody-->
+
+        </tbody>
+    </table>
+
+    <dialog id="dialog-create">
+        <h2>Opret parent1</h2>
+        <form id="form-create"> <!--lav id så vi kan hente i js, submit-->
+            <h2>Opret parent1</h2>
+            <label for="create-name">Navn</label>
+            <input type="text" id="create-name" name="name" placeholder="navn">
+            <!--husk name skal hedde det i java-->
+            <button>Opret</button>
+            <button type="button" class="btn-cancel">Annuller</button>
+        </form>
+    </dialog>
+
+    <dialog id="dialog-update"> <!--skriv open for at teste om dialog er der-->
+        <h2>Rediger parent1</h2>
+        <form id="form-update">
+            <label for="update-name">Navn</label>
+            <input type="text" id="update-name" name="name" placeholder="navn">
+            <button>Færdig</button>
+            <button type="button" class="btn-cancel">Annuller</button>
+        </form>
+    </dialog>
+
+    <!-- dialog delete post -->
+    <dialog id="dialog-delete">
+        <div id="delete-dialog-text">
+            <h2>Er du sikker på du vil slette</h2>
+            <h2 id="dialog-delete-name">Indsættes navn/titel/id på det der skal slettes her</h2>
+            <h2>?</h2>
+        </div>
+        <form id="form-delete">
+            <button>Ja</button> <!--default er type="submit" for button i form-->
+            <button type="button" class="btn-cancel">Nej</button>
+        </form>
+    </dialog>
+
+</section>
+<footer></footer>
+
+<script src="js/parent1.js"></script>
+<script src="js/fragments/fragments.js"></script>
+</body>
+</html>

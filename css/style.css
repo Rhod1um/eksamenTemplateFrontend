@@ -1,0 +1,174 @@
+/* ---------- root variables ---------- */
+:root {
+    --green: rgb(45, 85, 95);
+    --light-green: rgb(102, 128, 131);
+    --light-grey: #f1f1f4;
+    --text-color-light: #f1f1f1;
+    --text-color-dark: #333;
+    --white: #f9f9f9;
+    --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- general styling ---------- */
+html {
+    color: var(--text-color-dark);
+    font-family: var(--font-family);
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+h3 {
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+a {
+    cursor: pointer;
+    color: var(--green);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- header styling ---------- */
+header {
+    background-color: var(--green);
+    color: var(--text-color-light);
+    padding: 1em;
+}
+
+/* ---------- footer styling ---------- */
+
+footer {
+    background-color: var(--green);
+    color: var(--text-color-light);
+    padding: 1em;
+    text-align: center;
+}
+
+/* ---------- tabel styling ---------- */
+
+table {
+    border-collapse: collapse;
+    width: 75vw;
+    margin: auto;
+    background-color: var(--light-grey);
+}
+
+thead {
+    background-color: var(--green);
+    color: var(--text-color-light);
+    position: sticky;
+    top: 0;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--light-green);
+}
+
+tr {
+    cursor: pointer;
+    transition: 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+tr:hover {
+    background-color: var(--green);
+    color: var(--text-color-light);
+}
+
+tr img {
+    max-width: 100px;
+}
+/* ---------- form styling ---------- */
+/* input form stryling */
+form {
+    margin: 2em auto 0;
+    background-color: var(--light-green);
+    padding: 1em 1em 2em;
+    text-align: center;
+}
+
+button {
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    color: var(--text-color-light);
+    background-color: var(--green);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    width: 100%;
+    max-width: 380px;
+    margin: 5px;
+}
+tr button:hover{ /*tr button gør at det kun er buttons inde i tr*/
+    background-color: var(--light-green);
+}
+
+input {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 350px;
+    padding: 1em;
+    border: 2px solid var(--green);
+    display: block;
+    background: var(--white);
+}
+
+dialog {
+    max-width: 700px;
+    width: 90vw; /*vw - viewport width, gør at den*/
+    /*det her betyder at er dialog under 700px vil den fylde 90% af skærmbredde*/
+    /*se i broweren, user agen css, modal er automatisk stylet og responsivt til skærmstørrelse*/
+    text-align: center;
+}
+#delete-dialog-text h2{
+    display: inline;
+}
+.headline {
+    text-align: center;
+}
+#btn-create {
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    margin: auto;
+    margin-bottom: 30px;
+}
+footer {
+    height: 100px;
+    margin-top: 50px;
+}
+#midter-div {
+    margin: 50px 200px;
+}

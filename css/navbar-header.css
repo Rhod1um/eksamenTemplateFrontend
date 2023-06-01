@@ -1,0 +1,55 @@
+/* Header/logo Title */
+body header { /*det er det her som body skal have, basis layout, men den styler ikke fragmenterne
+hvis det ikke ligger her åbenbart*/
+    font-family: Arial, Helvetica, sans-serif;;
+    margin: 0;
+    color: #f2f2f2;
+}
+header .header {
+    padding: 30px;
+    text-align: center;
+}
+#portrait-span{
+    padding: 0 20px 0 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+#p-logo{
+    font-size: 15px;
+}
+/* Style the top navigation bar */
+.navbar {
+    background-color: rgb(102, 128, 131);
+    display: flex;
+    justify-content: right; /*fjern for at have det til venstre*/
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: #f2f2f2;
+    padding: 14px 30px;
+    text-decoration: none;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}

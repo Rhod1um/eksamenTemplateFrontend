@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar-header.css">
+    <title>Child</title>
+</head>
+<body>
+<section>
+  <h2 class="headline">Child oversigt</h2>
+  <div id="btn-create">
+    <button type="button">Opret child</button>
+  </div>
+
+  <table id="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Navn</th>
+      <th>Parent1 Navn</th>
+      <th>Parent2 Navn</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody> <!--body fordi js looper i tbody-->
+
+    </tbody>
+  </table>
+
+  <dialog id="dialog-create">
+    <h2>Opret child</h2>
+    <form id="form-create" action="http://localhost:8080/child" method="post"> <!--lav id så vi kan hente i js, submit-->
+      <h2>Opret child</h2>
+      <label for="create-name">Navn</label>
+      <input type="text" id="create-name" name="name" placeholder="navn">
+      <label for="parent1">Parent1</label>
+
+      <select name="parent1" id="parent1">
+        <option selected disabled>Vælg parent1</option>
+      </select>
+      <label for="parent2">Parent2</label>
+      <select name="parent2" id="parent2"> <!--name er navnet på hele objektet som lægges-->
+        <option selected disabled>Vælg parent2</option>
+      </select>
+      <!--husk name skal hedde det i java-->
+      <button>Opret</button>
+      <button type="button" class="btn-cancel">Annuller</button>
+    </form>
+  </dialog>
+
+  <dialog id="dialog-update"> <!--skriv open for at teste om dialog er der-->
+    <h2>Rediger child</h2>
+    <form id="form-update">
+      <label for="update-name">Navn</label>
+      <input type="text" id="update-name" name="name" placeholder="navn">
+
+      <select name="parent1" id="update-parent1">
+        <option selected disabled>Vælg parent1</option>
+      </select>
+      <label for="parent2">Parent2</label>
+      <select name="parent2" id="update-parent2"> <!--name er navnet på hele objektet som lægges-->
+        <option selected disabled>Vælg parent2</option>
+      </select>
+      <button>Færdig</button>
+      <button type="button" class="btn-cancel">Annuller</button>
+    </form>
+  </dialog>
+
+  <!-- dialog delete post -->
+  <dialog id="dialog-delete">
+    <div id="delete-dialog-text">
+      <h2>Er du sikker på du vil slette</h2>
+      <h2 id="dialog-delete-name">Indsættes navn/titel/id på det der skal slettes her</h2>
+      <h2>?</h2>
+    </div>
+    <form id="form-delete">
+      <button>Ja</button> <!--default er type="submit" for button i form-->
+      <button type="button" class="btn-cancel">Nej</button>
+    </form>
+  </dialog>
+
+</section>
+<footer></footer>
+
+<script src="js/child2.js"></script>
+<script src="js/fragments/fragments.js"></script>
+</body>
+</html>
